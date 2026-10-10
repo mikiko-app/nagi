@@ -3,154 +3,192 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>サポート｜Nagi手帳</title>
-<meta name="description" content="Nagi手帳のサポートページ。使い方、よくある質問、お問い合わせ先。">
+<title>Nagi手帳 サポート｜Nagi手帳</title>
+<meta name="description" content="Nagi手帳のNagi手帳 サポート">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400&display=swap">
-<style>
-:root{
-  --bg:#F4EDE0; --surface:#FFFBF4; --ink:#2E2823; --muted:#7A6D60; --line:#E0D4C1;
-  --accent:#5B4636; --fill:#44607F;
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>:root{
+  --bg:#F4EDE0; --surface:#FFFBF4; --sunk:#EBE2D2; --ink:#2E2823; --muted:#7A6D60;
+  --line:#E0D4C1; --accent:#5B4636; --focus:#9A7446; --fill:#44607F;
   --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
   --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.95;-webkit-font-smoothing:antialiased}
-.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-h1{font-family:var(--serif);font-size:27px;font-weight:700;letter-spacing:.07em;line-height:1.4;margin:4px 0 6px}
-.meta{font-family:var(--mono);font-size:11px;color:var(--muted);margin:0 0 30px}
-h2{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:16px;font-weight:700;letter-spacing:.08em;
-   margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--fill)}
-h2 .n{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--surface);background:var(--fill);border-radius:999px;padding:3px 9px}
-p{margin:0 0 14px}
-.origin{margin:30px 0 0;padding:17px 19px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
-.origin span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fill);margin-bottom:7px}
-.origin p{margin:0;font-family:var(--serif);font-size:14.5px;line-height:2;letter-spacing:.03em}
-h3{font-family:var(--serif);font-size:15.5px;font-weight:700;letter-spacing:.05em;line-height:1.6;margin:30px 0 12px;padding-left:13px;border-left:3px solid var(--fill)}
-.contact{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--fill);border-radius:14px;padding:18px 20px;margin:0 0 10px}
-.contact p:last-child{margin-bottom:0}
-.fill{background:#FFF3C4;padding:1px 6px;border-radius:4px;font-weight:700}
-.qa{border-top:1px solid var(--line)}
-.qa details{border-bottom:1px solid var(--line)}
-.qa summary{cursor:pointer;list-style:none;padding:15px 28px 15px 0;position:relative;font-family:var(--serif);font-size:15px;font-weight:700;letter-spacing:.03em}
-.qa summary::-webkit-details-marker{display:none}
-.qa summary::after{content:"＋";position:absolute;right:4px;top:15px;color:var(--fill);font-size:14px}
-.qa details[open] summary::after{content:"－"}
-.qa .a{padding:0 0 16px;color:var(--muted);font-size:14px}
-.qa .a p:last-child{margin-bottom:0}
-ul{margin:0 0 14px;padding-left:0;list-style:none}
-li{position:relative;padding-left:20px;margin-bottom:9px}
-li::before{content:"";position:absolute;left:3px;top:.88em;width:5px;height:5px;border-radius:50%;background:var(--fill);opacity:.6}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-th{width:9em;font-weight:700;font-size:13px;color:var(--fill);white-space:nowrap}
-footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-a{color:var(--fill)}
-@media (max-width:520px){ .wrap{padding:28px 16px 64px} h1{font-size:23px} th{width:auto;display:block;border:0;padding-bottom:0} td{display:block;padding-top:4px} }
-</style>
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:14px;line-height:2.05;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(122,109,96,.055) 1px,transparent 1px);background-size:22px 22px}
+.wrap{max-width:730px;margin:0 auto;padding:42px 18px 80px}
+
+/* ---- 見出し ---- */
+.hero{background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  padding:34px 30px 30px;margin:0 0 16px}
+.hk{font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--focus)}
+h1{font-family:var(--serif);font-size:30px;font-weight:600;letter-spacing:.08em;line-height:1.55;margin:12px 0 0}
+.meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted);margin:14px 0 0}
+.hindex{margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:8px}
+.hindex div{display:flex;gap:12px;align-items:baseline;font-size:12.5px;color:var(--muted)}
+.hindex i{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--focus)}
+
+/* ---- 節 ---- */
+section{background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  padding:32px 30px 30px;margin:0 0 16px}
+.sh{display:flex;gap:13px;align-items:baseline;margin:0 0 22px;
+  padding-bottom:16px;border-bottom:1px solid var(--line)}
+.sh .n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--fill)}
+.sh b{font-family:var(--serif);font-size:19.5px;font-weight:600;letter-spacing:.045em;line-height:1.65}
+h3{font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:.04em;line-height:1.7;
+  margin:30px 0 12px;color:var(--ink)}
+p{margin:0 0 15px}
+p:last-child{margin-bottom:0}
+.lead{font-family:var(--serif);font-size:16.5px;line-height:1.95;letter-spacing:.02em;margin:0 0 20px}
+b{font-weight:700}
+a{color:var(--fill);text-underline-offset:3px}
+
+ul{margin:4px 0 15px;padding:0;list-style:none}
+li{position:relative;padding-left:19px;margin-bottom:10px;line-height:2}
+li::before{content:"";position:absolute;left:2px;top:.95em;width:4px;height:4px;
+  background:var(--focus);opacity:.55;transform:rotate(45deg)}
+
+/* ---- 表 ---- */
+table{width:100%;border-collapse:collapse;margin:6px 0 15px;font-size:13.5px}
+th,td{text-align:left;padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.95}
+th{width:10em;padding-right:16px;font-weight:500;font-size:11.5px;letter-spacing:.06em;
+  color:var(--focus);font-family:var(--sans);white-space:nowrap}
+tr:last-child th,tr:last-child td{border-bottom:0}
+
+/* ---- 囲み ---- */
+.box{margin:0 0 22px;padding:19px 21px;background:var(--bg);
+  border-left:2px solid var(--fill);border-radius:3px}
+.note{margin:22px 0 0;padding:16px 19px;background:var(--bg);border-radius:12px;
+  font-size:12.5px;line-height:1.95;color:var(--muted)}
+.origin{margin:30px 0 0;padding:24px 26px 22px;border-radius:14px;background:var(--bg)}
+.origin span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--focus);margin-bottom:11px}
+.origin p{font-family:var(--serif);font-size:15px;line-height:1.95;letter-spacing:.015em}
+
+/* ---- Q&A ---- */
+.qa{margin:6px 0 0;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:17px 30px 17px 0;position:relative;
+  font-size:14px;font-weight:500;letter-spacing:.02em;line-height:1.8}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:7px;height:7px;
+  border-right:1px solid var(--focus);border-bottom:1px solid var(--focus);
+  transform:translateY(-70%) rotate(45deg);transition:transform .18s}
+details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.a{padding:0 0 19px;font-size:13.5px;line-height:2.05;color:var(--muted)}
+.a p{margin:0 0 11px}
+
+/* ---- 連絡先 ---- */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  padding:26px 30px;margin:0 0 16px}
+.contact .note{margin-top:15px}
+.leadcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  padding:28px 30px;margin:0 0 16px;border-left:3px solid var(--fill)}
+.leadcard .lead{margin:0}
+.contact .ck{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--focus)}
+.contact .cm{font-family:var(--serif);font-size:17px;letter-spacing:.02em;margin:8px 0 0;word-break:break-all}
+
+/* ---- PDCA ---- */
+.pdca{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:14px;margin:22px 0 0;overflow:hidden}
+.pdca > div{background:var(--bg);padding:20px 16px 18px}
+.pdca > div:nth-child(odd){padding-right:30px}
+.pdca > div:nth-child(even){padding-left:30px}
+.pdar{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--surface);
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+  font-size:13px;line-height:1;color:var(--fill);transform:translate(-50%,-50%);z-index:2}
+.pdar.t{left:50%;top:25%}.pdar.r{left:75%;top:50%}
+.pdar.b{left:50%;top:75%}.pdar.l{left:25%;top:50%}
+.pdca .pk{font-family:var(--serif);font-size:30px;line-height:1;color:var(--fill);letter-spacing:.04em}
+.pdca b{display:block;font-size:14.5px;margin:9px 0 7px;letter-spacing:.03em}
+.pdca p{font-size:12.5px;line-height:1.9;color:var(--muted);margin:0}
+
+/* ---- メニュー一覧 ---- */
+.mcard{display:grid;grid-template-columns:auto 1fr;column-gap:16px;
+  border-top:1px solid var(--line);padding:28px 0 6px}
+.sh + .mcard{border-top:0;padding-top:4px}
+.mcard .mn{font-family:var(--serif);font-size:24px;line-height:1.05;color:var(--focus);opacity:.45;font-weight:600}
+.mcard h4{font-family:var(--serif);font-size:16.5px;font-weight:600;letter-spacing:.05em;margin:0 0 11px}
+.mcard .mb{min-width:0}
+.mcard ul{margin:0}
+.mcard li{font-size:13.5px;line-height:1.95;margin-bottom:8px}
+
+footer{margin:24px 0 0;padding:22px 30px;background:var(--surface);
+  border:1px solid var(--line);border-radius:18px;
+  display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted)}
+footer .sp{margin-left:auto}
+@media (max-width:540px){
+  .wrap{padding:26px 13px 60px}
+  .hero,section,.contact,footer,.leadcard{padding-left:19px;padding-right:19px;border-radius:15px}
+  .hero{padding-top:28px}
+  h1{font-size:24px}
+  .sh b{font-size:17.5px}
+  .lead{font-size:15.5px}
+  th{width:auto;display:block;border:0;padding:12px 0 0}
+  td{display:block;padding:2px 0 12px}
+  tr:last-child td{border-bottom:0}
+}</style>
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow">Support</div>
-  <h1>Nagi手帳 サポート</h1>
-  <p class="meta">最終更新日：2026年10月10日</p>
+  <div class="hero">
+    <div class="hk">Support</div>
+    <h1>Nagi手帳 サポート</h1>
+    <p class="meta">Nagi手帳　最終更新日：2026年10月10日</p>
+    <div class="hindex"><div><i>01</i><span>Nagi手帳について</span></div><div><i>02</i><span>PDCAサイクル（計画・実行・検証・改善）</span></div><div><i>03</i><span>メニューごとの機能</span></div><div><i>04</i><span>よくある質問</span></div><div><i>05</i><span>ご要望・不具合のご連絡</span></div></div>
+  </div>
 
   <div class="contact">
-    <p><b>お問い合わせ</b><br>
-    <a href="mailto:nagitecho.support@gmail.com">nagitecho.support@gmail.com</a></p>
-    <p style="font-size:13.5px;color:var(--muted);margin-top:8px">2〜3営業日以内にご返信します。不具合のご連絡の際は、<b>お使いの機種・iOSのバージョン・アプリのバージョン</b>と、できれば画面の写真を添えていただけると助かります。</p>
+    <span class="ck">Contact</span>
+    <p class="cm"><a href="mailto:nagitecho.support@gmail.com">nagitecho.support@gmail.com</a></p>
+    <p class="note" style="margin-top:14px">2〜3営業日以内にご返信します。不具合のご連絡の際は、<b>お使いの機種・iOSのバージョン・アプリのバージョン</b>と、できれば画面の写真を添えていただけると助かります。</p>
   </div>
 
-  <h2><span class="n">01</span>Nagi手帳について</h2>
-  <p>多くの手帳は、今日やるタスクから始まります。Nagi手帳は、その手前から始まります。</p>
+  <section><div class="sh"><span class="n">01</span><b>Nagi手帳について</b></div>
+    <p class="lead">多くの手帳は「今日やること」から始まります。でも、日々の雑用や緊急の用事に追われているだけでは、本当に大切なこと——学び直し、健康、家族、そして将来の夢——にはなかなか手が回りません。</p>
+    <p><b>Nagi手帳は、その手前から始まります。</b></p>
+    <p>まず、あなたが人生で大切にしたい「価値観」と、自分で決めた「マイルール」を定めます。次に、自分や家庭・仕事といった役割ごとに、10年後から5年後、3年後、1年、3ヶ月、今月、今週へと目標を順に細分化していきます。こうして絞り込んだ先に、今日やることが決まります。</p>
+    <p>長期のビジョンから一貫して落とし込んだ予定だからこそ、「なぜこれをやるのか」に迷わず、心からやりたいことに向かって日々を真っ直ぐ歩んでいくことができます。</p>
 
-  <h3>長い目標から、今日のアクションへ</h3>
-  <p>まず、あなたが大切にしたいこと——<b>価値観</b>を定めます。</p>
-  <p>次に、自分、家庭・プライベート、仕事といった<b>役割</b>ごとに、10年後、5年後、3年後、1年、3ヶ月、今月、今週へと、目標を少しずつ細かくしていきます。そして、その一番最後に<b>今日のアクション</b>がつながります。</p>
-  <p>長いスパンの計画から一貫して降ろしてきた予定です。だからこそ、「なぜこれをやるのか」で迷わず、手が動きます。</p>
+    <h3>振り返るほど、深まっていく</h3>
+    <p>振り返りのタイミングは、朝と夜、1週間、1ヶ月、3ヶ月、そして1年の6種類です。日々の記録は1週間の振り返りへ、1週間の振り返りは1ヶ月の振り返りへと、自動でまとまっていきます。</p>
+    <p>過去のページを探したり、自分で集計し直したりする必要はありません。</p>
 
-  <h3>振り返るほど、深まっていく</h3>
-  <p>振り返りのタイミングは、朝と夜、週末、月末、3ヶ月ごと、そして1年。日々の記録は1週間の振り返りへ、1週間の振り返りは1ヶ月の振り返りへと、<b>自動でまとまっていきます。</b></p>
-  <p>過去のページを探したり、自分で集計し直したりする必要はありません。ただ、過去の自分が書いたことばに向き合う。その時間が、心を穏やかに整えてくれます。</p>
+    <h3>記録は、あなたの端末の中だけに</h3>
+    <p>書かれた内容、写真、価値観などの大切なデータは、お使いの端末内、およびご自身のiCloudにのみ保存されます。開発者のサーバーを経由することは一切ないため、開発者を含む第三者があなたのプライベートな記録を見ることはできません。</p>
 
-  <h3>記録は、あなたの端末の中だけに</h3>
-  <p>書かれた内容、写真、価値観の記録は、お使いの端末と、ご自身のiCloudにのみ保存されます。当方のサーバーを経由しないため、<b>開発者を含む第三者がデータを見ることは一切ありません。</b></p>
+    <div class="origin">
+      <span>名前について</span>
+      <p>凪とは、風がやみ、海の面が静まることをいいます。心がざわついたままでは、本当にやりたいことは見えてきません。まず心を整えて、静かな水面に未来を映すように、進む先を決めていく。そのための手帳です。</p>
+    </div>
+  </section>
 
-  <div class="origin">
-    <span>名前について</span>
-    <p>「凪」は、風がやんで水面が静かになることを指します。朝の手帳タイムの最初に「心を整える」という時間を置いているのは、そこから1日を始めてほしいからです。</p>
-  </div>
+  <section><div class="sh"><span class="n">02</span><b>PDCAサイクル（計画・実行・検証・改善）</b></div>
+    <p>Nagi手帳は、日々の行動と長期の目標をつなぐPDCAサイクルを大切にしています。</p>
+    <div class="pdca"><div><div class="pk">P</div><b>計画</b><p>価値観と役割を決め、10年後から今週まで逆算して計画を立てます。</p></div><div><div class="pk">D</div><b>実行</b><p>朝15分・夜10分の手帳タイムと、1タップのルーティンで心地よく行動します。</p></div><div><div class="pk">A</div><b>改善</b><p>振り返りの終盤で次の目標を書き換え、より良い計画へとアップデートします。</p></div><div><div class="pk">C</div><b>検証</b><p>朝晩・週・月・3ヶ月・1年。前の段階の記録が自動で並び、達成度を確認します。</p></div><span class="pdar t">→</span><span class="pdar r">↓</span><span class="pdar b">←</span><span class="pdar l">↑</span></div>
+  </section>
 
-  <h2><span class="n">02</span>よくある質問</h2>
-  <div class="qa">
-    <details>
-      <summary>iPhoneとMacで記録が同期されません</summary>
-      <div class="a">
-        <p>どちらの端末も同じApple IDでサインインし、「設定」→ Apple ID → iCloud → iCloud Drive がオンになっているかご確認ください。そのうえで、アプリの 設定 →「アプリの設定」→「いま同期する」を押してください。</p>
-        <p>通信が不安定な場所では同期が遅れることがあります。電波の良い場所で、両方の端末でアプリを開き直してみてください。</p>
-      </div>
-    </details>
-    <details>
-      <summary>書いた記録が消えてしまいました</summary>
-      <div class="a">
-        <p>まず、日記の画面でその日付を開いてみてください。手帳タイムの記録は日記から確認・編集できます。</p>
-        <p>見つからない場合は、設定 →「アプリの設定」→ バックアップ から、以前に書き出したファイルを読み込めます。機種変更の前には、こちらから書き出しておくことをおすすめします。</p>
-      </div>
-    </details>
-    <details>
-      <summary>機種変更するときは何をすればよいですか</summary>
-      <div class="a">
-        <p>同じApple IDで新しい端末にアプリを入れ、iCloudをオンにすれば、記録は自動で引き継がれます。</p>
-        <p>念のため、設定 →「アプリの設定」→ バックアップ →「書き出す」でファイルを保存しておくと安心です。新しい端末では「読み込む」から復元できます。</p>
-      </div>
-    </details>
-    <details>
-      <summary>購入したのに有料機能が使えません</summary>
-      <div class="a">
-        <p>設定 →「アプリの設定」→「購入を復元」をお試しください。購入時と同じApple IDでサインインしている必要があります。</p>
-        <p>それでも反映されない場合は、端末を再起動してからもう一度お試しください。解決しないときは、お問い合わせ先までご連絡ください。</p>
-      </div>
-    </details>
-    <details>
-      <summary>月額プランを解約したいです</summary>
-      <div class="a">
-        <p>解約は、端末の「設定」→ ご自身の名前 → サブスクリプション から行えます。アプリ内では解約できません。</p>
-        <p>解約しても、それまでに書いた記録が消えることはありません。</p>
-      </div>
-    </details>
-    <details>
-      <summary>質問の内容を自分用に変えられますか</summary>
-      <div class="a">
-        <p>はい。設定 →「手帳タイムの中身」から、質問の並べ替え、使わない項目を外す、自分の質問を足す、ができます。朝・夜・週・1ヶ月・3ヶ月・1年のそれぞれで設定できます。</p>
-      </div>
-    </details>
-    <details>
-      <summary>写真の検索では、どんな画像が出てきますか</summary>
-      <div class="a">
-        <p>Openverseが提供する、CC0（著作権が放棄された権利フリー）の画像のみを検索しています。選んだ画像は端末内に保存されます。</p>
-        <p>日本語より英語のキーワードのほうが、精度の高い結果が出ます。</p>
-      </div>
-    </details>
-    <details>
-      <summary>データは外部に送信されていますか</summary>
-      <div class="a">
-        <p>書かれた記録・写真・設定が外部に送信されることはありません。すべて端末内とご自身のiCloudにのみ保存されます。</p>
-        <p>外部に通信するのは、写真検索で入力した検索語をOpenverseに送るときと、Appleを通じて購入を処理するときだけです。詳しくはプライバシーポリシーをご覧ください。</p>
-      </div>
-    </details>
-  </div>
+  <section><div class="sh"><span class="n">03</span><b>メニューごとの機能</b></div>
+    <div class="mcard"><span class="mn">01</span><div class="mb"><h4>手帳タイム</h4><ul><li>TOPから開きます。朝（約15分）、夜（約10分）、1週間（約30分）、1ヶ月（約45分）、3ヶ月（約60分）、1年（約90分）の6種類があります。</li><li>質問に順に答えていき、最後にチェックリストが出ます。途中で閉じても書きかけは保存されます。</li><li>終えると内容が1枚のまとめになり、日記にも自動で登録されます。</li></ul></div></div><div class="mcard"><span class="mn">02</span><div class="mb"><h4>日記</h4><ul><li>書いたものがすべて日付順に並びます。手帳タイムの記録、日記として書いた文章、ルーティンの記録が、同じ日付の下にまとまります。</li><li>言葉で検索できます。カレンダーには、記録のある日に印が付き、写真を入れた日はその日のマスに写真が表示されます。</li><li>その日のページには、前年・一昨年など過去の同じ日の記録も並びます。</li></ul></div></div><div class="mcard"><span class="mn">03</span><div class="mb"><h4>未来</h4><ul><li>叶えたいことを、写真と実行日で登録します。実行日が決まっていないものは「日付未定」のまま置いておけます。</li><li>写真は権利フリー（CC0）のものを言葉で検索して使えるほか、自分の写真も使えます。</li><li>「スライドで眺める」で順に表示されます。朝の手帳タイムの中からも確認できます。</li></ul></div></div><div class="mcard"><span class="mn">04</span><div class="mb"><h4>過去（最高の瞬間）</h4><ul><li>最高の瞬間を写真で残します。日記のその日のページにある「最高の瞬間に残す」からも入れられます。</li><li>「スライドで眺める」で順に表示されます。</li></ul></div></div><div class="mcard"><span class="mn">05</span><div class="mb"><h4>目標</h4><ul><li>自分・家庭・仕事といった役割ごとに、10年後から5年後、3年後、1年、3ヶ月、今月、今週へと、目標を順に細分化していく画面です。</li><li>今月・3ヶ月・1年それぞれについて、残り日数が表示されます。設定で家族の生年月日を登録しておくと、「10年後」などの欄にそのときの家族の年齢が表示されます。</li><li>すべての役割の目標を紙に印刷できます。</li></ul></div></div><div class="mcard"><span class="mn">06</span><div class="mb"><h4>価値観</h4><ul><li>価値観とマイルールを置く画面です。朝の手帳タイムの最初にここが表示されます。</li><li>価値観は「見出し＋本文」のカードで、何枚でも作れます。マイルールはカテゴリごとに分けて、1行に1つずつ書きます。</li></ul></div></div><div class="mcard"><span class="mn">07</span><div class="mb"><h4>設定</h4><ul><li>価値観、役割と家族、目標、毎日のルーティンを、ここからまとめて編集できます。</li><li>手帳タイムの中身（質問の並べ替え・追加・書き換え）と、チェックリスト（6種類すべて）も変えられます。</li><li>見出しの写真、iCloud同期、バックアップの書き出しと読み込み、お知らせ、表示言語を切り替えられます。</li></ul></div></div>
+  </section>
 
-  <h2><span class="n">03</span>ご要望・不具合のご連絡</h2>
-  <p>「この質問を変えてほしい」「こういう振り返りが欲しい」といったご要望も歓迎しています。いただいた内容は今後の改善の参考にさせていただきます。</p>
-  <table>
-    <tr><th>連絡先</th><td><a href="mailto:nagitecho.support@gmail.com">nagitecho.support@gmail.com</a></td></tr>
-    <tr><th>運営者</th><td>MIKI SHOJI</td></tr>
-    <tr><th>関連ページ</th><td><a href="./privacy.html">プライバシーポリシー</a>　／　<a href="./terms.html">利用規約</a></td></tr>
-  </table>
+  <section><div class="sh"><span class="n">04</span><b>よくある質問</b></div>
+    <div class="qa"><details><summary>iPhoneとMacで記録が同期されません</summary><div class="a"><p>どちらの端末も同じApple IDでサインインし、「設定」→ Apple ID → iCloud → iCloud Drive がオンになっているかご確認ください。そのうえで、アプリの 設定 →「アプリの設定」→「いま同期する」を押してください。</p><p>通信が不安定な場所では同期が遅れることがあります。電波の良い場所で、両方の端末でアプリを開き直してみてください。</p></div></details><details><summary>書いた記録が消えてしまいました</summary><div class="a"><p>まず、日記の画面でその日付を開いてみてください。手帳タイムの記録は日記から確認・編集できます。</p><p>見つからない場合は、設定 →「アプリの設定」→ バックアップ から、以前に書き出したファイルを読み込めます。機種変更の前には、こちらから書き出しておくことをおすすめします。</p></div></details><details><summary>機種変更するときは何をすればよいですか</summary><div class="a"><p>同じApple IDで新しい端末にアプリを入れ、iCloudをオンにすれば、記録は自動で引き継がれます。</p><p>念のため、設定 →「アプリの設定」→ バックアップ →「書き出す」でファイルを保存しておくと安心です。新しい端末では「読み込む」から復元できます。</p></div></details><details><summary>MacBookで使えますか</summary><div class="a"><p>Apple Silicon（M1以降）のMacでお使いいただけます。MacのApp Storeで「Nagi手帳」と検索し、検索結果の上にある「iPhone と iPad のApp」のタブから入手してください。</p><p>iPhoneと同じApple IDであれば、購入やサブスクリプションもそのまま引き継がれます。Intel製のMac（2020年11月より前のモデル）では利用できません。</p></div></details><details><summary>購入したのに有料機能が使えません</summary><div class="a"><p>設定 →「アプリの設定」→「購入を復元」をお試しください。購入時と同じApple IDでサインインしている必要があります。</p><p>それでも反映されない場合は、端末を再起動してからもう一度お試しください。解決しないときは、お問い合わせ先までご連絡ください。</p></div></details><details><summary>月額プランを解約したいです</summary><div class="a"><p>解約は、端末の「設定」→ ご自身の名前 → サブスクリプション から行えます。アプリ内では解約できません。</p><p>解約しても、それまでに書いた記録が消えることはありません。</p></div></details><details><summary>質問の内容を自分用に変えられますか</summary><div class="a"><p>はい。設定 →「手帳タイムの中身」から、質問の並べ替え、使わない項目を外す、自分の質問を足す、ができます。もとからある質問も、文そのものを書き換えられます。朝・夜・1週間・1ヶ月・3ヶ月・1年のそれぞれで設定できます。</p><p>最後に出るチェックリストも、6種類すべてで項目を追加・編集・並べ替えできます。どちらも「はじめの形に戻す」でいつでも元に戻せます。</p></div></details><details><summary>写真の検索では、どんな画像が出てきますか</summary><div class="a"><p>Openverseが提供する、CC0（著作権が放棄された権利フリー）の画像のみを検索しています。選んだ画像は端末内に保存されます。</p><p>日本語より英語のキーワードのほうが、精度の高い結果が出ます。</p></div></details><details><summary>データは外部に送信されていますか</summary><div class="a"><p>書かれた記録・写真・設定が外部に送信されることはありません。すべて端末内とご自身のiCloudにのみ保存されます。</p><p>外部に通信するのは、写真検索で入力した検索語をOpenverseに送るときと、Appleを通じて購入を処理するときだけです。詳しくは<a href="./privacy.html">プライバシーポリシー</a>をご覧ください。</p></div></details></div>
+  </section>
 
-  <footer>Nagi手帳 サポート</footer>
+  <section><div class="sh"><span class="n">05</span><b>ご要望・不具合のご連絡</b></div>
+    <p>「この質問を変えてほしい」「こういう振り返りが欲しい」といったご要望も歓迎しています。いただいた内容は今後の改善の参考にさせていただきます。</p>
+    <table>
+      <tr><th>連絡先</th><td><a href="mailto:nagitecho.support@gmail.com">nagitecho.support@gmail.com</a></td></tr>
+      <tr><th>運営者</th><td>MIKI SHOJI</td></tr>
+    </table>
+  </section>
+
+  <footer><span>NAGI 手帳</span><span>サポート</span><span class="sp"><a href="./privacy.html">プライバシーポリシー</a>　／　<a href="./terms.html">利用規約</a>　／　<a href="./tokushoho.html">特定商取引法に基づく表記</a></span></footer>
 </div>
 </body>
 </html>
